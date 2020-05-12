@@ -1,0 +1,64 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.InformationPanel"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:l="sap.ui.layout">
+   <Panel
+      headerText="{i18n>informationPanelTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto" >
+      <content>
+      	<FormattedText 
+            htmlText="There is a great varity of prorgramming languages on the market. But every single one of them has their strenghts and weknesses.
+            So the question is which language to chose. The answer is: It depends. But to make your decicion more easy, we listed the main aspekts of each language.
+            If you are interested in learning more about it, you can click on the names in the table. There you have also the possibility to try out coding in our online editor.
+            If you already are familiar with some of those languages feel free to rate them. By doing so you can help other developers to decide what language to use.
+            "
+            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+        <l:VerticalLayout
+        		width="100%">
+	        <l:Grid 
+	        	width="100%"
+	        	position="Center"
+	        	containerQuery="true">
+		        <Image src="https://i.pinimg.com/originals/de/75/a0/de75a01cebac61b6cf0c5868e3829105.jpg" >
+					<layoutData>
+					  <l:GridData
+					    span="XL4 L4 M4 S8"/>
+					</layoutData>
+				</Image>
+		        <FormattedText 
+		        	htmlText="In the image on the left side, you can see many well known languages. The first high-level programming language was Plankalkül, created by 
+		        	Konrad Zuse between 1942 and 1945. In the early years, there were not many languages on the market and often you were forced to use special languages. Most likely
+		        	 you needed to have special hardware for specific languages. Alos you had no ide at all and had to write code in a default editor.
+	        		Nowadays you are able to program with most languages on every operating system. There ist a variety of IDEs, which makes coding way more easy. 
+	        		Now it is time to chose the right programming language. Here follows our top list:
+		        	"
+		        	class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
+		        	width="100%" >
+		        	<layoutData>
+		              <l:GridData span="XL8 L8 M8 S12"/>
+		            </layoutData>
+		        </FormattedText>
+	        </l:Grid>
+        </l:VerticalLayout>
+      	<Button
+         id="helloDialogButton"
+         icon="sap-icon://world"
+         text="{i18n>openDialogButtonText}"
+         press=".onOpenDialog"
+         class="sapUiSmallMarginEnd"/>
+         <Button
+            text="{i18n>showHelloButtonText}"
+            press=".onShowHello"
+            class="myAppDemoWT myCustomButton"/>
+         <Input
+            value="{/recipient/name}"
+            valueLiveUpdate="true"
+            width="60%"/>
+         <FormattedText
+            htmlText="Hello {/recipient/name}"
+            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+      </content>
+   </Panel>
+</mvc:View>

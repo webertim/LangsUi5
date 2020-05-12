@@ -1,0 +1,44 @@
+{
+  "ProgrammingLanguages": [
+	{
+	  "Name": "F#",
+	  "OperationArea": "Backend",
+	  "Release": "2015-04-01T00:00:00",
+	  "Popularity": 0.5,
+	  "GettingStarted": "https://www.google.de",
+	  "Documentation": "https://www.google.de"
+	},
+	{
+	  "Name": "Java",
+	  "OperationArea": "Frontend",
+	  "Release": "2015-04-01T00:00:00",
+	  "Popularity": 1.0,
+	  "GettingStarted": "https://www.google.de",
+	  "Documentation": "https://www.google.de"
+	},
+	{
+	  "Name": "C#",
+	  "OperationArea": "Web-Frontend",
+	  "Release": "2015-04-01T00:00:00",
+	  "Popularity": 2.0,
+	  "GettingStarted": "https://www.google.de",
+	  "Documentation": "https://www.google.de"
+	},
+	{
+	  "Name": "Python",
+	  "OperationArea": "AI",
+	  "Release": "2015-04-01T00:00:00",
+	  "Popularity": 1.5,
+	  "GettingStarted": "https://www.google.de",
+	  "Documentation": "https://www.google.de"
+	},
+	{
+	  "Name": "C++",
+	  "OperationArea": "Performance-oriented",
+	  "Release": "2015-04-01T00:00:00",
+	  "Popularity": 3.7,
+	  "GettingStarted": "https://www.google.de",
+	  "Documentation": "https://www.google.de"
+	}
+  ]
+}
