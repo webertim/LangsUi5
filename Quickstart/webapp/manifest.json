@@ -10,8 +10,8 @@
 			"version": "1.0.0"
 		},
 		"dataSources": {
-		  "invoiceRemote": {
-			"uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+		  "programmingLanguagesRemote": {
+			"uri": "https://aed5e2f4-3567-4c5a-9b63-1d7240a99365.abap-web.eu10.hana.ondemand.com/sap/opu/odata/sap/ZUI_C_PLANGUAGES_03/ZC_PROGRAMMINGLANGUAGES_HSKA03/?sap-client=100&$format=json",
 			"type": "OData",
 			"settings": {
 			  "odataVersion": "2.0"
