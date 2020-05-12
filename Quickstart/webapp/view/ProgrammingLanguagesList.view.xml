@@ -2,39 +2,36 @@
    controllerName="sap.ui.demo.walkthrough.controller.ProgrammingLanguagesList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-   <List       
-	  id="invoiceList"
-      headerText="{i18n>programmingLanguagesListTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{
-         path : 'programmingLanguage>/ProgrammingLanguages',
-         sorter : {
-				path : 'Name',
-				group : true
-			}
-      }" >
-   	
-   	<headerToolbar>
-         <Toolbar id="e">
-            <Title id="f" text="{i18n>programmingLanguagesListTitle}"/>
-            <ToolbarSpacer id="g"/>
-            <SearchField id="h" width="50%" search=".onFilterInvoices"/>
-         </Toolbar>
-      </headerToolbar>
-      <items>
-         <ObjectListItem id="b"
-			title="{programmingLanguage>Name}"
-			number="{programmingLanguage>OperationArea}"
-			numberUnit="{view>/currency}"
-			numberState="{= ${programmingLanguage>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
-			<firstStatus>
-						<ObjectStatus id="c" text="{
-							path: 'invoice>Status',
-							formatter: '.formatter.statusText'
-						}"/>
-			</firstStatus>
-		</ObjectListItem>
-	</items>
-   </List>
+   <Table id="ProgrammingLanguagesTable" inset="true">
+	   	<headerToolbar>
+	         <Toolbar>
+	            <Title text="{i18n>programmingLanguagesListTitle}"/>
+	            <ToolbarSpacer/>
+	            <SearchField width="50%" search=".onFilterProgrammingLanguages"/>
+	         </Toolbar>
+	      </headerToolbar>
+   		<columns>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="Name"></Text>
+   			</Column>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="OperationArea"></Text>
+   			</Column>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="Release"></Text>
+   			</Column>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="Popularity"></Text>
+   			</Column>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="GettingStarted"></Text>
+   			</Column>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="Documentation"></Text>
+   			</Column>
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   				<Text text="UserRating"></Text>
+   			</Column>
+   		</columns>
+   </Table>
 </mvc:View>

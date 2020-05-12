@@ -47,9 +47,10 @@
 					"bundleName": "sap.ui.demo.walkthrough.i18n.i18n"
 				}
 			},
-			"invoice": {
-				"dataSource": "invoiceRemote"
-			}
+			  "programmingLanguage": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "ProgrammingLanguages.json"
+			  }
 		},
 		"resources": {
 			"css": [{
