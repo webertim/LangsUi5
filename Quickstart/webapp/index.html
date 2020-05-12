@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SAPUI5 Walkthrough</title>
+	<script
+		id="sap-ui-bootstrap"
+		src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-resourceroots='{
+			"sap.ui.demo.walkthrough": "./"
+		}'
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true">
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+	<div data-sap-ui-component data-name="sap.ui.demo.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
+	<div class="sec-widget" data-widget="abea9f174bbaae26aa3fcc1c67d46bd0"></div>
+	<script>
+		SEC_HTTPS = true;
+		SEC_BASE = "compilers.widgets.sphere-engine.com"; 
+		(function(d, s, id){ SEC = window.SEC || (window.SEC = []);
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; 
+		  js.src = (SEC_HTTPS ? "https" : "http") + "://" + SEC_BASE + "/static/sdk/sdk.js";
+		  fjs.parentNode.insertBefore(js, fjs);   
+		}(document, "script", "sphere-engine-compilers-jssdk"));
+	</script>
+</body>
+</html>

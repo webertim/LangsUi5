@@ -1,0 +1,46 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <List       
+	  id="invoiceList"
+      headerText="{i18n>invoiceListTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{
+         path : 'invoice>/Invoices',
+         sorter : {
+				path : 'ShipperName',
+				group : true
+			}
+      }" >
+   	
+   	<headerToolbar>
+         <Toolbar id="e">
+            <Title id="f" text="{i18n>invoiceListTitle}"/>
+            <ToolbarSpacer id="g"/>
+            <SearchField id="h" width="50%" search=".onFilterInvoices"/>
+         </Toolbar>
+      </headerToolbar>
+      <items>
+         <ObjectListItem id="b"
+			title="{invoice>Quantity} x {invoice>ProductName}"
+			number="{
+				parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
+				type: 'sap.ui.model.type.Currency',
+				formatOptions: {
+					showMeasure: false
+				}
+			}"
+			numberUnit="{view>/currency}"
+			numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
+			<firstStatus>
+						<ObjectStatus id="c" text="{
+							path: 'invoice>Status',
+							formatter: '.formatter.statusText'
+						}"/>
+			</firstStatus>
+		</ObjectListItem>
+	</items>
+   </List>
+</mvc:View>
