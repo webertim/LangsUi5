@@ -6,10 +6,14 @@ sap.ui.define([
 	"sap/ui/model/FilterOperator"
 ], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
 	"use strict";
+	
+	var _oController;
 
 	return Controller.extend("sap.ui.demo.walkthrough.controller.ProgrammingLanguagesList", {
 		formatter: formatter,
 		onInit : function () {
+			_oController = this;
+			
 			var oViewModel = new JSONModel({
 				currency: "EUR"
 			});
@@ -17,11 +21,12 @@ sap.ui.define([
 			
 			var oTable = this.getView().byId("ProgrammingLanguagesTable");
 			oTable.bindItems({
-				path: 'programmingLanguage>/ProgrammingLanguages',
+				path: 'programmingLanguage>/d/results',
 				template: new sap.m.ColumnListItem({
+					type: "Navigation",
 					cells: [
 						new sap.m.Text({
-							text: "{programmingLanguage>Name}"
+							text: "{programmingLanguage>Name}",
 						}),
 						new sap.m.Text({
 							text: "{programmingLanguage>OperationArea}"
@@ -32,16 +37,18 @@ sap.ui.define([
 						new sap.m.Text({
 							text: "{programmingLanguage>Popularity}"
 						}),
-						new sap.m.Text({
-							text: "{programmingLanguage>GettingStarted}"
+						new sap.m.Link({
+							text:"{programmingLanguage>GettingStarted}",
+							href: "{programmingLanguage>GettingStarted}" 
 						}),
-						new sap.m.Text({
-							text: "{programmingLanguage>Documentation}"
+						new sap.m.Link({
+							text:"{programmingLanguage>Documentation}",
+							href: "{programmingLanguage>Documentation}"
 						}),
 						new sap.m.RatingIndicator("noIconSize", {
 							enabled: false,
 							value: "{programmingLanguage>Rating}",
-							tooltip: "This is a tooltip"
+							tooltip:"Rating"
 						})
 						]
 				})
@@ -60,6 +67,13 @@ sap.ui.define([
 			var oTable = this.byId("ProgrammingLanguagesTable");
 			var oBinding = oTable.getBinding("items");
 			oBinding.filter(aFilter);
+		},
+		onLanguageClicked : function (oEvent) {
+			var oItem = oEvent.getParameter("listItem"); //var oItem = oControlEvent.getSource();
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail", {
+				programmingLanguagePath: window.encodeURIComponent(oItem.getBindingContext("programmingLanguage").getPath().substr(1))
+			});
 		}
 
 	});

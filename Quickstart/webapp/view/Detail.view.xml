@@ -1,0 +1,29 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:wt="sap.ui.demo.walkthrough.control"
+	xmlns:core="sap.ui.core">
+	<Page
+		title="{i18n>detailPageTitle}"
+		showNavButton="true"
+		navButtonPress=".onNavBack">
+		<Panel
+	      headerText="{programmingLanguage>Name}"
+	      class="sapUiResponsiveMargin"
+	      width="auto" >
+	      <content>
+	      	<FormattedText 
+	            htmlText="There is a great varity of prorgramming languages on the market. But every single one of them has their strenghts and weknesses.
+	            So the question is which language to chose. The answer is: It depends. But to make your decicion more easy, we listed the main aspekts of each language.
+	            If you are interested in learning more about it, you can click on the names in the table. There you have also the possibility to try out coding in our online editor.
+	            If you already are familiar with some of those languages feel free to rate them. By doing so you can help other developers to decide what language to use.
+	            "
+	            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+          </content>
+		</Panel>
+		<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+		<core:HTML id="idHTMLContent"/>
+	</Page>
+	
+</mvc:View>

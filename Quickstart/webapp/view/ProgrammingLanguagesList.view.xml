@@ -2,7 +2,7 @@
    controllerName="sap.ui.demo.walkthrough.controller.ProgrammingLanguagesList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-   <Table id="ProgrammingLanguagesTable" inset="true">
+   <Table id="ProgrammingLanguagesTable" inset="true" itemPress="onLanguageClicked">
 	   	<headerToolbar>
 	         <Toolbar>
 	            <Title text="{i18n>programmingLanguagesListTitle}"/>
@@ -11,7 +11,7 @@
 	         </Toolbar>
 	      </headerToolbar>
    		<columns>
-   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+   			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left" >
    				<Text text="Name"></Text>
    			</Column>
    			<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">

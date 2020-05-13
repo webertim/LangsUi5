@@ -15,7 +15,7 @@ sap.ui.define([
 			// set data model
 			var oData = {
 				recipient : {
-					name : "World"
+					name : "Affe"
 				}
 			};
 			var oModel = new JSONModel(oData);
@@ -23,6 +23,9 @@ sap.ui.define([
 
 			// set dialog
 			this._helloDialog = new HelloDialog(this.getRootControl());
+			
+			// create the views based on the url/hash
+			this.getRouter().initialize();
 		},
 
 
