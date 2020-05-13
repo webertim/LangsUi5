@@ -48,8 +48,7 @@
 				}
 			},
 			  "programmingLanguage": {
-			  	"type": "sap.ui.model.json.JSONModel",
-				"uri": "ProgrammingLanguages.json"
+			  	"dataSource": "programmingLanguagesRemote"
 			  }
 		},
 		"routing": {
