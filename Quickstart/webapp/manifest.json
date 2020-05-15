@@ -47,8 +47,10 @@
 					"bundleName": "sap.ui.demo.walkthrough.i18n.i18n"
 				}
 			},
+
 			  "programmingLanguage": {
-			  	"dataSource": "programmingLanguagesRemote"
+			  	"type": "sap.ui.model.json.JSONModel",
+				"uri": "ProgrammingLanguages.json"
 			  }
 		},
 		"routing": {
